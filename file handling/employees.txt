@@ -1,0 +1,3 @@
+AK23,Aryan,CS,20000.0
+AK24,Prathmesh,Civil,18000.0
+AK25,Vishwajeet,DS,25000.0
