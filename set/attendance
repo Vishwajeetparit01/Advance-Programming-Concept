@@ -1,0 +1,22 @@
+attendance = {}
+
+for day in ["Monday", "Tuesday", "Wednesday"]:
+    attendance[day] = set(input("Enter students present on " + day + ": ").split())
+
+all_students = set.intersection(*attendance.values())
+one_class = set()
+
+for day in attendance:
+    for student in attendance[day]:
+        count = 0
+        for d in attendance:
+            if student in attendance[d]:
+                count += 1
+        if count == 1:
+            one_class.add(student)
+
+all_unique = set.union(*attendance.values())
+
+print("Attended all classes:", all_students)
+print("Attended only one class:", one_class)
+print("Total unique students:", len(all_unique))
